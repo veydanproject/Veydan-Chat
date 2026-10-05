@@ -6530,7 +6530,7 @@ dependencies = [
 
 [[package]]
 name = "veydanchat"
-version = "5.0.2"
+version = "5.0.3"
 dependencies = [
  "serde_json",
  "tauri",
@@ -6548,8 +6548,8 @@ dependencies = [
 
 [[package]]
 name = "vlink-client"
-version = "0.1.1"
-source = "git+https://github.com/veydanproject/Veydan-Link?tag=v0.1.1#61a8c42819e162b99175046b95c17aafbae81a29"
+version = "0.1.2"
+source = "git+https://github.com/veydanproject/Veydan-Link?tag=v0.1.2#f6555f7b6536c6694ef01c8620677e5f7fdf37dd"
 dependencies = [
  "bytes",
  "h2",
@@ -6563,8 +6563,8 @@ dependencies = [
 
 [[package]]
 name = "vlink-proto"
-version = "0.1.1"
-source = "git+https://github.com/veydanproject/Veydan-Link?tag=v0.1.1#61a8c42819e162b99175046b95c17aafbae81a29"
+version = "0.1.2"
+source = "git+https://github.com/veydanproject/Veydan-Link?tag=v0.1.2#f6555f7b6536c6694ef01c8620677e5f7fdf37dd"
 dependencies = [
  "bytes",
  "h2",
