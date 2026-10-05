@@ -1,0 +1,10 @@
+[Desktop Entry]
+Categories=Network;InstantMessaging;
+Comment=End-to-end encrypted chat on Nostr
+Exec={{exec}} %U
+Icon={{icon}}
+Name={{name}}
+StartupNotify=true
+StartupWMClass={{exec}}
+Terminal=false
+Type=Application

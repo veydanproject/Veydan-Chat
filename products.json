@@ -1,0 +1,46 @@
+{
+  "$comment": "Veydan Chat: the modules of the product and the product itself. This file is written for the published snapshot (\"snapshot\" names its product): scripts/boundaries.sh checks what is here, ui/vite-veydan-modules.js builds the UI from the modules, scripts/product.sh gives the wrappers of the Tauri CLI the crate, the identifiers and the ports. A dev server does not notice an edit: restart it.",
+  "snapshot": "chat",
+  "modules": {
+    "messenger": {
+      "ui": "ui/src/lib/messenger",
+      "routes": [
+        "ui/src/routes/messenger",
+        "ui/src/routes/(mobile)/messenger"
+      ],
+      "crates": [
+        "crates/messenger",
+        "crates/messenger-app",
+        "crates/desktop-notify",
+        "crates/tauri-plugin-veydan-push"
+      ]
+    }
+  },
+  "targets": {
+    "chat": {
+      "kind": "product",
+      "app": "apps/chat",
+      "tagline": {
+        "en": "End-to-end encrypted chat on Nostr.",
+        "ru": "Чат на Nostr со сквозным шифрованием."
+      },
+      "modules": [
+        "messenger"
+      ],
+      "identifier": "net.veydan.chat",
+      "repo": "veydanproject/Veydan-Chat",
+      "public": true,
+      "devPort": 1480,
+      "androidDevPort": 1490,
+      "plugins": [
+        "dialog",
+        "fs",
+        "updater",
+        "process",
+        "single-instance",
+        "opener",
+        "veydan-push"
+      ]
+    }
+  }
+}
