@@ -6530,7 +6530,7 @@ dependencies = [
 
 [[package]]
 name = "veydanchat"
-version = "5.0.1"
+version = "5.0.2"
 dependencies = [
  "serde_json",
  "tauri",
