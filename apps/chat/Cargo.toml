@@ -3,7 +3,7 @@
 
 [package]
 name = "veydanchat"
-version = "5.0.4"
+version = "5.0.5"
 description = "Chat over Nostr: direct messages and groups, end-to-end encrypted"
 authors = ["Veydan Project"]
 edition = "2021"
@@ -19,14 +19,14 @@ crate-type = ["staticlib", "cdylib", "rlib"]
 tauri-build = { version = "2", features = [] }
 
 # The product crate names what tauri-build and generate_context! read
-# (docs/platform-spec.md 5.5): tauri with the features of its config,
+# (internal/platform-spec.md 5.5): tauri with the features of its config,
 # serde_json for the `plugins` section, every plugin its capabilities name.
 [dependencies]
 tauri = { version = "2", features = [] }
 serde_json = "1"
 # The module contract, the command router, the app builder, the tray frame.
 veydan-shell = { path = "../../crates/shell" }
-# The module Messenger: the adapter of the messenger crates (docs/messenger-spec.md).
+# The module Messenger: the adapter of the messenger crates (internal/messenger-spec.md).
 veydan-messenger-app = { path = "../../crates/messenger-app" }
 
 # ── Desktop only: the plugins the shell registers ────────────────────────────
