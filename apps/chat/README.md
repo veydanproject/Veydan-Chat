@@ -182,7 +182,7 @@ source.
 
 Copyright © 2026 **Veydan Project**.
 
-Developed by **Rookbaem Technologies LLC**, USA.
+Developed by **Rookbeam Technologies LLC**, USA.
 
 Veydan Chat is **source-available** software under the
 [PolyForm Perimeter License 1.0.1](https://polyformproject.org/licenses/perimeter/1.0.1):
