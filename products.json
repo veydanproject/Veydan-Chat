@@ -52,7 +52,8 @@
         "process",
         "single-instance",
         "opener",
-        "veydan-push"
+        "veydan-push",
+        "veydan-call"
       ]
     }
   }

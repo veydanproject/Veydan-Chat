@@ -59,8 +59,8 @@ mod tests {
     }
 
     /// `commands.golden.txt`: every command of the product on a line with
-    /// the module that answers it and where it exists (`all` platforms or
-    /// `desktop` only), the lines of Space's file that belong to the shell
+    /// the module that answers it and where it exists (`all` platforms,
+    /// `desktop` or `mobile` only), the lines of Space's file that belong to the shell
     /// and to the messenger. A name neither appears nor disappears without
     /// a matching change in the UI.
     #[test]
@@ -74,10 +74,14 @@ mod tests {
                     words.next().unwrap(),
                     words.next().unwrap(),
                 );
-                assert!(matches!(platform, "all" | "desktop"), "{line}");
+                assert!(matches!(platform, "all" | "desktop" | "mobile"), "{line}");
                 (command, module, platform)
             })
-            .filter(|(_, _, platform)| cfg!(desktop) || *platform == "all")
+            .filter(|(_, _, platform)| match *platform {
+                "desktop" => cfg!(desktop),
+                "mobile" => cfg!(mobile),
+                _ => true,
+            })
             .map(|(command, module, _)| (command, module))
             .collect();
         let table = veydan_shell::command_table(product(), module_list()).unwrap();
