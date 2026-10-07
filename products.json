@@ -22,7 +22,20 @@
       "app": "apps/chat",
       "tagline": {
         "en": "End-to-end encrypted chat on Nostr.",
-        "ru": "Чат на Nostr со сквозным шифрованием."
+        "ru": "Чат на Nostr со сквозным шифрованием.",
+        "uk": "Чат на Nostr з наскрізним шифруванням.",
+        "de": "Ende-zu-Ende-verschlüsselter Chat auf Nostr.",
+        "es": "Chat cifrado de extremo a extremo sobre Nostr.",
+        "fr": "Messagerie chiffrée de bout en bout sur Nostr.",
+        "it": "Chat crittografata end-to-end su Nostr.",
+        "pl": "Czat na Nostr szyfrowany end-to-end.",
+        "pt-BR": "Conversas criptografadas de ponta a ponta no Nostr.",
+        "tr": "Nostr üzerinde uçtan uca şifreli sohbet.",
+        "id": "Chat terenkripsi ujung ke ujung di Nostr.",
+        "vi": "Trò chuyện được mã hóa đầu cuối trên Nostr.",
+        "zh-CN": "基于 Nostr 的端到端加密聊天。",
+        "ja": "Nostr上のエンドツーエンド暗号化チャット。",
+        "ko": "Nostr 기반 종단간 암호화 채팅."
       },
       "modules": [
         "messenger"
