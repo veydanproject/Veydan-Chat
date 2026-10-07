@@ -3,7 +3,7 @@
 
 [package]
 name = "veydanchat"
-version = "5.0.7"
+version = "5.0.8"
 description = "Chat over Nostr: direct messages and groups, end-to-end encrypted"
 authors = ["Veydan Project"]
 edition = "2021"
