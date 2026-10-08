@@ -3566,6 +3566,8 @@ dependencies = [
  "http",
  "ring",
  "rustls",
+ "serde",
+ "serde_json",
  "tokio",
  "tokio-rustls",
  "tracing",
@@ -7189,7 +7191,7 @@ dependencies = [
 
 [[package]]
 name = "veydanchat"
-version = "5.1.7"
+version = "5.1.8"
 dependencies = [
  "serde_json",
  "tauri",
