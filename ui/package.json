@@ -5,6 +5,7 @@
   "description": "End-to-end encrypted chat on Nostr.",
   "author": "Veydan Project",
   "type": "module",
+  "packageManager": "pnpm@12.4.2",
   "scripts": {
     "dev": "node ../scripts/ui.mjs chat dev",
     "build": "node ../scripts/ui.mjs chat build",
