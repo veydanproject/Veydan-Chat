@@ -14,6 +14,19 @@
         "crates/desktop-notify",
         "crates/tauri-plugin-veydan-push"
       ]
+    },
+    "cloud": {
+      "ui": "ui/src/lib/cloud",
+      "routes": [
+        "ui/src/routes/cloud"
+      ],
+      "crates": [
+        "crates/cloud",
+        "crates/recovery"
+      ],
+      "requires": [
+        "messenger"
+      ]
     }
   },
   "targets": {
@@ -38,7 +51,8 @@
         "ko": "Nostr 기반 종단간 암호화 채팅."
       },
       "modules": [
-        "messenger"
+        "messenger",
+        "cloud"
       ],
       "identifier": "net.veydan.chat",
       "repo": "veydanproject/Veydan-Chat",
@@ -53,7 +67,8 @@
         "single-instance",
         "opener",
         "veydan-push",
-        "veydan-call"
+        "veydan-call",
+        "barcode-scanner"
       ]
     }
   }
