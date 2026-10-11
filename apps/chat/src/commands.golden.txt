@@ -213,6 +213,7 @@ modules_list shell all
 modules_set_enabled shell all
 open_url shell desktop
 sync_change_passphrase shell all
+sync_change_storage shell all
 sync_create_vault shell all
 sync_debug_clear shell all
 sync_debug_get shell all
