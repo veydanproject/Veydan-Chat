@@ -63,6 +63,9 @@ messenger_call_debug_ring messenger mobile
 messenger_call_decline messenger all
 messenger_call_end messenger all
 messenger_call_get_state messenger all
+messenger_call_history messenger all
+messenger_call_history_clear messenger all
+messenger_call_history_hide messenger all
 messenger_call_list_cameras messenger all
 messenger_call_list_screens messenger desktop
 messenger_call_mute messenger all
@@ -83,6 +86,8 @@ messenger_call_switch_camera messenger all
 messenger_call_video_ack messenger all
 messenger_call_video_subscribe messenger all
 messenger_call_video_unsubscribe messenger all
+messenger_calls_mark_seen messenger all
+messenger_calls_missed messenger all
 messenger_card_accept messenger all
 messenger_card_send messenger all
 messenger_chat_delete messenger all
@@ -121,6 +126,8 @@ messenger_emoji_used messenger all
 messenger_group_act messenger all
 messenger_group_answer_invite messenger all
 messenger_group_answer_request messenger all
+messenger_group_avatar_remove messenger all
+messenger_group_avatar_set messenger all
 messenger_group_call_get_state messenger all
 messenger_group_call_join messenger all
 messenger_group_call_leave messenger all
@@ -231,7 +238,7 @@ modules_choose shell all
 modules_first_run_done shell all
 modules_list shell all
 modules_set_enabled shell all
-open_url shell desktop
+open_url shell all
 sync_change_passphrase shell all
 sync_change_storage shell all
 sync_create_vault shell all
