@@ -50,6 +50,23 @@
         "ja": "Nostr上のエンドツーエンド暗号化チャット。",
         "ko": "Nostr 기반 종단간 암호화 채팅."
       },
+      "slogan": {
+        "en": "Messaging that belongs to you.",
+        "ru": "Общение, которое принадлежит вам.",
+        "uk": "Спілкування, яке належить вам.",
+        "de": "Kommunikation, die dir gehört.",
+        "es": "Una comunicación que te pertenece.",
+        "fr": "Des échanges qui vous appartiennent.",
+        "it": "Una comunicazione che ti appartiene.",
+        "pl": "Komunikacja, która należy do ciebie.",
+        "pt-BR": "Uma comunicação que pertence a você.",
+        "tr": "Size ait bir iletişim.",
+        "id": "Komunikasi yang menjadi milik Anda.",
+        "vi": "Trò chuyện thuộc về bạn.",
+        "zh-CN": "属于你的沟通。",
+        "ja": "あなただけのコミュニケーション。",
+        "ko": "온전히 당신의 것인 대화."
+      },
       "modules": [
         "messenger",
         "cloud"
