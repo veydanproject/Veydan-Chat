@@ -167,6 +167,20 @@ release.
   relays and groups to watch for you, and the push passes through Google;
   neither can read your messages — they only see that a message arrived, and
   when.
+- **A server of your team or your own, next to Veydan.** Somebody who runs a
+  server gives you a link or a card of it. The app shows what it would add
+  and adds it only when you press "Add". Then you have a private chat with
+  that person on the server: a separate chat marked "Private · name of the
+  server", beside the one you may already have through Veydan. Its messages,
+  files, calls and groups stay on that server and never reach the servers
+  of Veydan. You can send the card of your server to a person in an ordinary
+  chat to invite them to the private one, and remove a server in the
+  settings: it goes from all your devices, with its private chats. The
+  server sees your IP address and when messages come, never what they say.
+- **Push for a private server.** With push on, Veydan's push server wakes
+  your phone for the private server, and learns your device token, which
+  private server woke it and when, never who wrote or what. Without push,
+  messages of a private server arrive while the app runs.
 - **No telemetry.**
 
 ## The Veydan family
