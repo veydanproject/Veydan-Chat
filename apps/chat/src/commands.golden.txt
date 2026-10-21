@@ -39,6 +39,13 @@ cloud_trustees_disable cloud all
 cloud_trustees_setup cloud all
 cloud_trustees_status cloud all
 cloud_usage cloud all
+cloud_web_confirm cloud all
+cloud_web_login_approve cloud all
+cloud_web_login_deny cloud all
+cloud_web_login_inspect cloud all
+cloud_web_sessions cloud all
+cloud_web_sessions_revoke cloud all
+cloud_web_unfreeze cloud all
 demo_seed shell all
 host_info shell all
 labels_resolve shell all
