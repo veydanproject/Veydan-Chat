@@ -15,6 +15,16 @@
         "crates/tauri-plugin-veydan-push"
       ]
     },
+    "communities": {
+      "ui": "ui/src/lib/communities",
+      "routes": [],
+      "crates": [
+        "crates/communities"
+      ],
+      "requires": [
+        "messenger"
+      ]
+    },
     "cloud": {
       "ui": "ui/src/lib/cloud",
       "routes": [
@@ -69,6 +79,7 @@
       },
       "modules": [
         "messenger",
+        "communities",
         "cloud"
       ],
       "identifier": "net.veydan.chat",

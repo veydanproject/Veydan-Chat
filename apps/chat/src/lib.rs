@@ -3,7 +3,8 @@
 
 //! Veydan Chat: the product crate (internal/platform-spec.md 13.1). It holds
 //! the Tauri config, the strings of the product and the list of its
-//! modules — the adapter of the messenger and the cloud, which follows it;
+//! modules — the adapter of the messenger, the channels and the cloud,
+//! which follow it;
 //! `veydan_shell` starts it,
 //! and the plan of its sync is the shell's default over what the shell
 //! registers (9.1): the messenger syncs nothing, its data lives in a
@@ -16,7 +17,7 @@
 //! `Java_net_veydan_push_Core_describe`, exported by the adapter: naming
 //! `veydan_messenger_app::module()` here is what links it in (13.4).
 
-use veydan_shell::{Module, Product};
+use veydan_shell::{Module, Product, Switch};
 
 /// What Chat is (13.1, 13.5).
 fn product() -> Product {
@@ -29,10 +30,15 @@ fn product() -> Product {
     }
 }
 
-/// The modules of Chat, as `products.json` lists them: the messenger, then
-/// the cloud, which takes its seams and opens from the settings.
+/// The modules of Chat, as `products.json` lists them: the messenger, the
+/// channels of communities, on with it and speaking its network, then the
+/// cloud, which takes its seams and opens from the settings.
 pub fn module_list() -> Vec<Module> {
-    vec![veydan_messenger_app::module(), veydan_cloud::module()]
+    vec![
+        veydan_messenger_app::module(),
+        Module { switch: Switch::Follows("messenger"), ..veydan_communities::module() },
+        veydan_cloud::module(),
+    ]
 }
 
 #[cfg_attr(mobile, tauri::mobile_entry_point)]

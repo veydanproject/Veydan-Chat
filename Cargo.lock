@@ -995,6 +995,38 @@ dependencies = [
 ]
 
 [[package]]
+name = "communities-core"
+version = "0.1.0"
+dependencies = [
+ "aes-gcm",
+ "async-trait",
+ "base64 0.22.1",
+ "bytes",
+ "futures-util",
+ "getrandom 0.3.4",
+ "hex",
+ "jiff",
+ "keydist",
+ "messenger-avatar",
+ "messenger-core",
+ "messenger-links",
+ "messenger-media",
+ "messenger-richtext",
+ "nostr",
+ "nostr-sdk",
+ "qrcode",
+ "rustls",
+ "serde",
+ "serde_json",
+ "sha2 0.11.0",
+ "sqlx",
+ "tempfile",
+ "tokio",
+ "tracing",
+ "zeroize",
+]
+
+[[package]]
 name = "concurrent-queue"
 version = "2.5.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1288,9 +1320,9 @@ dependencies = [
 
 [[package]]
 name = "ctutils"
-version = "0.4.2"
+version = "0.4.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "7d5515a3834141de9eafb9717ad39eea8247b5674e6066c404e8c4b365d2a29e"
+checksum = "38d28fb6aa7dd680b3ffd1a3e64e115c177bdba63c0ae7f9cd48129ff05c4fa0"
 dependencies = [
  "cmov",
  "subtle",
@@ -3244,6 +3276,23 @@ dependencies = [
 ]
 
 [[package]]
+name = "keydist"
+version = "0.1.0"
+dependencies = [
+ "aes-gcm",
+ "getrandom 0.3.4",
+ "hex",
+ "hkdf",
+ "hmac",
+ "nostr",
+ "serde",
+ "serde_json",
+ "sha2 0.11.0",
+ "thiserror 2.0.18",
+ "zeroize",
+]
+
+[[package]]
 name = "ksni"
 version = "0.3.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -3647,6 +3696,7 @@ dependencies = [
  "getrandom 0.3.4",
  "hex",
  "hmac",
+ "messenger-avatar",
  "messenger-core",
  "messenger-http",
  "messenger-store",
@@ -7472,6 +7522,30 @@ dependencies = [
 ]
 
 [[package]]
+name = "veydan-communities"
+version = "0.1.0"
+dependencies = [
+ "async-trait",
+ "chrono",
+ "communities-core",
+ "messenger-core",
+ "messenger-links",
+ "messenger-transport",
+ "nostr",
+ "serde",
+ "serde_json",
+ "tauri",
+ "tauri-plugin-veydan-push",
+ "tokio",
+ "ts-rs",
+ "veydan-build-cfg",
+ "veydan-core",
+ "veydan-lock",
+ "veydan-shell",
+ "zeroize",
+]
+
+[[package]]
 name = "veydan-core"
 version = "0.1.0"
 dependencies = [
@@ -7525,6 +7599,7 @@ dependencies = [
  "messenger-http",
  "messenger-notify",
  "messenger-runtime",
+ "messenger-store",
  "nostr",
  "png 0.18.1",
  "rustls",
@@ -7656,7 +7731,7 @@ dependencies = [
 
 [[package]]
 name = "veydanchat"
-version = "5.1.21"
+version = "5.2.0"
 dependencies = [
  "serde_json",
  "tauri",
@@ -7672,6 +7747,7 @@ dependencies = [
  "tauri-plugin-veydan-push",
  "veydan-build-cfg",
  "veydan-cloud",
+ "veydan-communities",
  "veydan-messenger-app",
  "veydan-shell",
 ]

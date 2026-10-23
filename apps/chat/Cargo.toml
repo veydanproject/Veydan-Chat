@@ -3,7 +3,7 @@
 
 [package]
 name = "veydanchat"
-version = "5.1.21"
+version = "5.2.0"
 description = "Chat over Nostr: direct messages and groups, end-to-end encrypted"
 authors = ["Veydan Project"]
 edition = "2021"
@@ -34,6 +34,8 @@ serde_json = "1"
 veydan-shell = { path = "../../crates/shell" }
 # The module Messenger: the adapter of the messenger crates (internal/messenger-spec.md).
 veydan-messenger-app = { path = "../../crates/messenger-app" }
+# The module Communities: the channels, on with the messenger (internal/communities-stage1.md).
+veydan-communities = { path = "../../crates/communities" }
 # The module Cloud: Veydan Cloud, opened from the settings (internal/vcloud-plan.md 2.2).
 veydan-cloud = { path = "../../crates/cloud" }
 
