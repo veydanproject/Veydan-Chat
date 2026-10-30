@@ -7,6 +7,15 @@
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <!-- Requested by the WebView together with RECORD_AUDIO; missing it auto-denies the prompt -->
     <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <!-- The gallery in the sheet of the paperclip of the messenger (ROO-110):
+         the newest photos and videos as a grid, asked for only when the user
+         taps «Разрешить доступ». Android 14+ may give a part of them
+         (READ_MEDIA_VISUAL_USER_SELECTED); Android 12 and older read the
+         storage. Without them the system's Photo Picker still works. -->
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+    <uses-permission android:name="android.permission.READ_MEDIA_VISUAL_USER_SELECTED" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" android:maxSdkVersion="32" />
     <!-- Optional hardware: Google Play otherwise takes CAMERA and RECORD_AUDIO as a camera and a microphone the phone must have. -->
     <uses-feature android:name="android.hardware.camera" android:required="false" />
     <uses-feature android:name="android.hardware.camera.any" android:required="false" />
