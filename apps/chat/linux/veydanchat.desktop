@@ -3,6 +3,7 @@ Categories=Network;InstantMessaging;
 Comment=End-to-end encrypted chat on Nostr
 Exec={{exec}} %U
 Icon={{icon}}
+MimeType=x-scheme-handler/veydan;
 Name={{name}}
 StartupNotify=true
 StartupWMClass={{exec}}
