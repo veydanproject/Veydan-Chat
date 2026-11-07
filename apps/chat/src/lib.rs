@@ -102,31 +102,32 @@ mod tests {
         assert_eq!(table.len(), expected.len());
     }
 
-    /// The messenger registers nothing for sync: Chat syncs the system
-    /// entities alone — the lock, the settings of the shell on a computer,
-    /// the labels — so a storage shared with Space gives it the PIN and the
-    /// language (20.6).
+    /// Chat syncs the system entities — the lock, the settings of the shell
+    /// on a computer, the labels — so a storage shared with Space gives it
+    /// the PIN and the language (20.6), and the archive of the conversation
+    /// (9.6), the one handler: its secrets and segments are those of Space.
     #[test]
-    fn the_plan_syncs_the_system_entities_alone() {
+    fn the_plan_syncs_the_system_entities_and_the_archive() {
         let registry = veydan_shell::sync_registry(product(), module_list()).unwrap();
         let (puts, _) = registry.apply_order();
         #[cfg(desktop)]
-        let expected = ["password_vault", "setting", "label"];
+        let expected = ["password_vault", "setting", "messenger_secret", "messenger_segment", "label"];
         #[cfg(mobile)]
-        let expected = ["password_vault", "label"];
+        let expected = ["password_vault", "messenger_secret", "messenger_segment", "label"];
         assert_eq!(puts, expected);
-        assert!(registry.handler_names().is_empty());
+        assert_eq!(registry.handler_names(), [veydan_messenger_app::sync::HANDLER]);
     }
 
     /// The data file of Chat: the core's, the lock's and sync's tables and
-    /// nothing else; the messenger keeps its data in a database of its own.
+    /// the sync positions of the archive of the messenger, which keeps the
+    /// rest of its data in a database of its own.
     #[test]
-    fn the_schemas_are_the_cores_alone() {
+    fn the_schemas_are_the_cores_and_the_archives() {
         let mut names: Vec<_> = veydan_shell::schemas(&module_list())
             .iter()
             .map(|schema| schema.module)
             .collect();
         names.sort_unstable();
-        assert_eq!(names, ["core", "lock", "sync"]);
+        assert_eq!(names, ["core", "lock", "messenger", "sync"]);
     }
 }
