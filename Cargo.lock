@@ -7840,7 +7840,7 @@ dependencies = [
 
 [[package]]
 name = "veydanchat"
-version = "5.2.1"
+version = "5.2.2"
 dependencies = [
  "serde_json",
  "tauri",
