@@ -44,6 +44,7 @@ fn channel() -> PushChannel {
         app_id: "net.veydan.mobile".into(),
         app_version: Some("4.1.0".into()),
         environment: None,
+        voip_token: None,
     }
 }
 
@@ -91,7 +92,7 @@ async fn setup() -> Setup {
     }
     rt.relays().add_user(RELAY, None).await.unwrap();
     rt.relays().set_silent(false).await.unwrap();
-    rt.identity().create("pw").await.unwrap();
+    crate::testing::log_in(&rt).await;
     rt.refresh_signer().await.unwrap();
 
     let (gateway, private) = (MockServer::start().await, MockServer::start().await);
@@ -578,6 +579,7 @@ async fn an_iphone_is_told_to_a_private_server_through_the_gateway() {
         app_id: "net.veydan.mobile".into(),
         app_version: Some("5.2.0".into()),
         environment: Some("production".into()),
+        voip_token: None,
     }))
     .await
     .unwrap();

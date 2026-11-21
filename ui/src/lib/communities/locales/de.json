@@ -450,6 +450,7 @@
     "chan_where_no_files": "Dieser Server speichert keine Dateien: Wähle einen anderen.",
     "chan_keeper_here_line": "Neue Leser lässt dieses Gerät ein, solange die App geöffnet ist.",
     "chan_keeper_phone": "Auf einem Handy schläft die App im Hintergrund: Neue Leser warten, bis du sie öffnest.",
+    "chan_keeper_iphone": "Der Schlüsselverwalter funktioniert auf dem iPhone nicht: Ein anderes Gerät hält den Kanal, oder lass die App geöffnet.",
     "chan_keeper_keep_on": "Schlüsselverwalter eingeschaltet lassen",
     "chan_keeper_keep_on_hint": "Das Handy zeigt eine Benachrichtigung und lässt Leser auch bei geschlossener App ein. Verbraucht mehr Akku.",
     "chan_keeper_background": "arbeitet im Hintergrund",
@@ -647,7 +648,8 @@
     "chan_level_req_refuse": "Ablehnen",
     "chan_level_req_refuse_title": "Ablehnen: {name}",
     "chan_level_req_refuse_hint": "Der Leser erhält die Absage mit deiner Begründung. Seine Stufen bleiben, wie sie sind.",
-    "chan_level_req_reason": "Begründung (optional)"
+    "chan_level_req_reason": "Begründung (optional)",
+    "chan_err_not_found": "Die Datei ist im Speicher nicht mehr verfügbar."
   },
   "mobile": {}
 }

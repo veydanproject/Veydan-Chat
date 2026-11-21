@@ -450,6 +450,7 @@
     "chan_where_no_files": "Questo server non conserva file: scegline un altro.",
     "chan_keeper_here_line": "I nuovi lettori vengono fatti entrare da questo dispositivo finché l’app è aperta.",
     "chan_keeper_phone": "Sul telefono l’app va in pausa in background: i nuovi lettori aspettano che tu la apra.",
+    "chan_keeper_iphone": "Il custode non funziona su iPhone: il canale lo tiene un altro dispositivo, oppure tieni l'app aperta.",
     "chan_keeper_keep_on": "Tieni attivo il custode",
     "chan_keeper_keep_on_hint": "Il telefono mostra una notifica e fa entrare i lettori anche con l’app chiusa. Consuma più batteria.",
     "chan_keeper_background": "attivo in background",
@@ -647,7 +648,8 @@
     "chan_level_req_refuse": "Rifiuta",
     "chan_level_req_refuse_title": "Rifiuta: {name}",
     "chan_level_req_refuse_hint": "Il lettore riceverà il rifiuto con il tuo motivo. I suoi livelli non cambiano.",
-    "chan_level_req_reason": "Motivo (facoltativo)"
+    "chan_level_req_reason": "Motivo (facoltativo)",
+    "chan_err_not_found": "Il file non è più disponibile sullo storage."
   },
   "mobile": {}
 }
