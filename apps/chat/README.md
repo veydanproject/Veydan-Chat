@@ -41,9 +41,9 @@
   your device. The servers that carry them cannot read them.
 - **No single company in the middle.** Chat runs on Nostr, an open network of
   relays. Use the Veydan servers, or only your own.
-- **Everything you expect from a messenger** — groups, photos, voice and
-  video messages, reactions, replies, read receipts — on your computer and
-  your phone.
+- **Everything you expect from a messenger** — groups, channels, calls,
+  photos, voice and video messages, reactions, replies, read receipts — on
+  your computer and your phone.
 
 ## Features
 
@@ -78,6 +78,19 @@
   <source media="(prefers-color-scheme: dark)" srcset="docs/images/screen-group-dark.png">
   <img alt="A group chat: a reply, a voice message, a photo album and reactions" src="docs/images/screen-group-light.png">
 </picture>
+
+### Channels
+
+Read and publish news with comments, reactions and pinned posts. Posts read
+like articles, with a title and Markdown formatting, and may carry photos,
+videos, voice messages and video circles. A channel can be split into
+sections, some of them for the team only.
+
+### Calls
+
+Voice and video calls, one to one or in a group. On a computer you can
+share your screen. Calls are encrypted end to end between the callers; a
+call node carries the packets only when a direct connection is not possible.
 
 ### Photos, files, voice and video
 
@@ -115,12 +128,15 @@ The Android app has everything the desktop app has, plus push notifications.
 
 ## Getting started
 
-1. **Create your key** — or import one you already have (`nsec`, or an
-   encrypted `ncryptsec` backup).
-2. **Save the encrypted backup** the app shows you. There is no server and no
-   password reset: the backup is the only way to restore your account on a
-   new device.
-3. **Choose the servers** — the Veydan servers, or only your own relays.
+1. **Create your account** — a key made on your device, with a password for
+   its encrypted backup copy. Or sign in with one you already have: from
+   another device by a QR code, with your 12 recovery words, through people
+   you trust, or by importing the key (`nsec`, or an encrypted `ncryptsec`).
+2. **Choose the servers** — the Veydan servers, or only your own relays.
+3. **Keep a way back.** With the Veydan servers you get a free Veydan
+   Cloud: write down the 12 recovery words, and choose trusted people if
+   you like. Without it, keep the encrypted backup of your key: there is no
+   password reset.
 4. **Share your contact link** or QR code, and start talking.
 
 ## Download
@@ -159,7 +175,12 @@ release.
 - **Photos, files and voice** are encrypted on your device and stored as
   anonymous blocks.
 - **Your key** stays on your device, inside the app's encrypted vault behind
-  the app lock. Back it up as an encrypted `ncryptsec`.
+  the app lock. Back it up as an encrypted `ncryptsec`. With Veydan Cloud, a
+  copy of your keys is kept for recovery in a form only your 12 recovery
+  words or your trusted people can open.
+- **Calls** are encrypted end to end (DTLS-SRTP); a call node that relays
+  them sees the addresses and the amount of traffic, never the voice or
+  the picture.
 - **Your own servers.** Choose "My own servers" and the app sends nothing to
   Veydan servers: only your relays, your media storage (S3 or Blossom) and,
   if you want push, your push server.
